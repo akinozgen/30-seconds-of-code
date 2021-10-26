@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Overlay Hover</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        html, body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hover-img {
+            background-color: black;
+            color: white;
+            display: inline-block;
+            margin: 8px;
+            max-width: 320px;
+            min-width: 240px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            width: 100%;
+        }
+
+        .hover-img * {
+            box-sizing: border-box;
+            transition: all .3s ease;
+        }
+
+        .hover-img::before,
+        .hover-img::after {
+            background-color: rgba(0, 0, 0, .5);
+            border-top: 32px solid rgba(0, 0, 0, .5);
+            border-bottom: 32px solid rgba(0, 0, 0, .5);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            content: '';
+            transition: all .3s ease;
+            z-index: 1;
+            opacity: 0;
+            transform: scaleY(2);
+        }
+
+        .hover-img figcaption {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 2rem;
+            opacity: 0;
+            z-index: 2;
+            transition-delay: .1s;
+            font-size: 24px;
+            font-family: 'Poppins' sans-serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hover-img:hover::before,
+        .hover-img:hover::after {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .hover-img:hover img {
+            opacity: .7;
+        }
+
+        .hover-img:hover figcaption {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <figure class="hover-img">
+        <img src="https://picsum.photos/id/190/440/320.jpg" alt="" />
+        <figcaption>
+            <h3>Lorem <br />Ipsum</h3>
+        </figcaption>
+    </figure>
+</body>
+</html>

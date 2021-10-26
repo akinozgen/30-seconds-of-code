@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>Image Hover Menu</title>
+    <style>
+        html, body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hover-menu {
+            position: relative;
+            overflow: hidden;
+            margin: 8px;
+            min-width: 340px;
+            max-width: 480px;
+            max-height: 290px;
+            width: 100%;
+            background-color: black;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .hover-menu * {
+            box-sizing: border-box;
+        }
+
+        .hover-menu div {
+            position: absolute;
+            top: 0;
+            left: -120px;
+            width: 120px;
+            height: 100%;
+            padding: 8px 4px;
+            background-color: black;
+            transition: all .3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hover-menu div a {
+            display: block;
+            line-height: 2;
+            color: white;
+            text-decoration: none;
+            opacity: .8;
+            padding: 5px 15px;
+            position: relative;
+            transition: all .3s ease;
+        }
+
+        .hover-menu div a:hover {
+            text-decoration: underline;
+        }
+
+        .hover-menu:hover img {
+            opacity: .5;
+            right: -120px;
+        }
+
+        .hover-menu:hover div {
+            left: 0;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <figure class="hover-menu">
+        <img src="https://picsum.photos/id/815/800/480.jpg" alt="" />
+        <div>
+            <a href="javascript:void(0)">Home</a>
+            <a href="javascript:void(0)">Pricing</a>
+            <a href="javascript:void(0)">About</a>
+        </div>
+    </figure>
+
+</body>
+</html>

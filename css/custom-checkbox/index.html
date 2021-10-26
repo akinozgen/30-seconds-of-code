@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,500;1,700&display=swap"
+      rel="stylesheet">
+  <title>Custom Checkbox - CSS</title>
+  <style>
+    html, body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <svg class="checkbox-symbol">
+    <symbol id="check" viewbox="0 0 12 10">
+      <polyline
+        points="1.5 6 4.5 9 10.5 1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+      ></polyline>
+    </symbol>
+  </svg>
+
+  <div class="checkbox-container">
+    <input type="checkbox" class="checkbox-input" id="apples" />
+    <label for="apples" class="checkbox">
+      <span>
+        <svg width="12px" height="10px">
+          <use xlink:href="#check"></use>
+        </svg>
+      </span>
+      <span>Apples</span>
+    </label>
+
+    <input type="checkbox" id="oranges" class="checkbox-input" />
+    <label for="oranges" class="checkbox">
+      <span>
+        <svg width="12px" height="10px">
+          <use xlink:href="#check"></use>
+        </svg>
+      </span>
+      <span>Oranges</span>
+    </label>
+  </div>
+</body>
+</html>

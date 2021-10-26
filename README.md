@@ -6,3 +6,4 @@
 
 - [[CSS](/css)] [custom checkboxes](/css/custom-checkbox)
 - [[CSS](/css)] [floating list titles](/css/floating-list-titles)
+- [[CSS](/css)] [image hover menu](/css/image-hover-menu)

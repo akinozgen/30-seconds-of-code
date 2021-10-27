@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Cursor Gradient Tracking</title>
+    <style>
+        .mouse-cursor-gradient {
+            position: relative;
+            background-color: #7983ff;
+            padding: .5rem 1rem;
+            font-size: 1.2rem;
+            border: none;
+            color: white;
+            outline: none;
+            overflow: hidden;
+        }
+
+        .mouse-cursor-gradient span {
+            position: relative;
+        }
+
+        .mouse-cursor-gradient:before {
+            --size: 0;
+            content: '';
+            position: absolute;
+            left: var(--x);
+            top: var(--y);
+            width: var(--size);
+            height: var(--size);
+            background-image: radial-gradient(circle closest-side, rgb(163, 15, 163), transparent);
+            transform: translate(-50%, -50%);
+            transition: width .2s ease, height .2s ease;
+        }
+
+        .mouse-cursor-gradient:hover::before {
+            --size: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button class="mouse-cursor-gradient">
+        <span>Hover Me</span>
+    </button>
+
+    <script defer>
+
+        const btn = document.querySelector('.mouse-cursor-gradient');
+
+        btn.addEventListener('mousemove', function (e) {
+            const bounds = e.target.getBoundingClientRect();
+
+            const x = (e.clientX - bounds.left) + 20;
+            const y = (e.clientY - bounds.top) + 20;
+
+            this.style.setProperty('--x', `${x}px`);
+            this.style.setProperty('--y', `${y}px`);
+        });
+
+    </script>
+
+</body>
+</html>

@@ -8,3 +8,6 @@
 - [[CSS](/css)] [floating list titles](/css/floating-list-titles)
 - [[CSS](/css)] [image hover menu](/css/image-hover-menu)
 - [[CSS](/css)] [image overlay hover](/css/image-overlay-hover)
+
+### 27.10.2021
+- [[CSS](/css)] [mouse cursor gradient tracking](/css/mouse-cursor-gradient-tracking)

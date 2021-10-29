@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>Hover Additional Content</title>
+    <style>
+         html, body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            width: 300px;
+            height: 280px;
+            padding: 0;
+            box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .25);
+            border-radius: 8px;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .card * {
+            transition: all .3s ease-in-out;
+        }
+
+        .card img {
+            margin: 0;
+            width: 300px;
+            height: 224px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card h3 {
+            margin: 0;
+            padding: 12px 12px 48px;
+            line-height: 32px;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .card .focus-content {
+            display: block;
+            padding: 8px 12px;
+        }
+
+        .card p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .card:hover img,
+        .card:focus-within img {
+            margin-top: -80px;
+        }
+
+        .card:hover h3,
+        .card:focus-within h3 {
+            padding: 8px 12px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="card">
+        <img src="https://picsum.photos/id/1049/367/267" />
+        <h3>Lorem Ipsum</h3>
+        <div class="focus-content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit...
+                <br />
+                <a href="#!">Source</a>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -14,3 +14,4 @@
 
 ### 29.10.2021
 - [[CSS](/css)] [perspective hover image](/css/hover-perspective)
+- [[CSS](/css)] [hover additional content](/css/hover-additional-content)

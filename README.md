@@ -1,5 +1,7 @@
 # 30-seconds-of-code excercises
 
+[Demos available via GitHub Pages](https://akinozgen.github.io/30-seconds-of-code/)
+
 ## log:
 
 ### 26.10.2021

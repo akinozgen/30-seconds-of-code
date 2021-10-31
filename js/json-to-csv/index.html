@@ -64,7 +64,7 @@
             </div>
 
             <div class="col">
-                <textarea name="json" rows="10" class="form-control" placeholder="Paste JSON contents here..."></textarea>
+                <textarea name="json" rows="10" class="form-control" placeholder="Paste JSON contents here...">[ { "a": 1, "b": 2 }, { "a": 3, "b": 4, "c": 5 }, { "a": 6 }, { "b": 7 } ]</textarea>
             </div>
         </div>
 
@@ -79,7 +79,30 @@
                     Column names
                 </h3>
                 <div class="columns">
-                    
+                    <div class="column mb-2">
+                        <div class="input-group">
+                            <input type="text" name="column[]" class="form-control" value="a">
+                            <button class="btn btn-danger delete_column">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="column mb-2">
+                        <div class="input-group">
+                            <input type="text" name="column[]" class="form-control" value="b">
+                            <button class="btn btn-danger delete_column">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="column mb-2">
+                        <div class="input-group">
+                            <input type="text" name="column[]" class="form-control" value="c">
+                            <button class="btn btn-danger delete_column">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

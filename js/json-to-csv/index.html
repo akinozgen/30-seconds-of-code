@@ -223,7 +223,10 @@
         };
 
         btnDownload.addEventListener('click', function () {
-            downloadFile(window.csv, prompt('Filename: ', `${Date.now()}.csv`));
+            let filename = prompt('Filename: ', `${Date.now()}.csv`);
+            if (!filename) return;
+            
+            downloadFile(window.csv, filename);
         });
 
         btnAddColumn.addEventListener('click', function () {
